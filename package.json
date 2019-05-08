@@ -1,0 +1,41 @@
+{
+  "name": "mongodb-polymer3-nodejs-express",
+  "version": "0.1.0",
+  "description": "A starting point for MongoDB, Polymer 3, Nodejs and Express applications",
+  "author": "Gabriel Boltron",
+  "license": "MIT",
+  "repository": "https://github.com/tigerlegab/MEPN",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "polymer serve",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "polymer build && cpx api/**/* build/api --verbose && cpx package.json build --verbose && cpx package-lock.json build --verbose && cpx server.js build --verbose"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.14"
+  },
+  "devDependencies": {
+    "@polymer/app-layout": "^3.0.0",
+    "@polymer/app-route": "^3.0.0",
+    "@polymer/iron-flex-layout": "^3.0.0",
+    "@polymer/iron-iconset-svg": "^3.0.0",
+    "@polymer/iron-media-query": "^3.0.0",
+    "@polymer/iron-pages": "^3.0.0",
+    "@polymer/iron-selector": "^3.0.0",
+    "@polymer/paper-icon-button": "^3.0.0",
+    "@polymer/paper-button": "^3.0.1",
+    "@polymer/paper-input": "^3.0.2",
+    "@polymer/polymer": "^3.2.0",
+    "@webcomponents/webcomponentsjs": "^2.2.10",
+    "cpx": "^1.5.0",
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.7"
+  },
+  "engines": {
+    "node": ">=8.0"
+  }
+}
